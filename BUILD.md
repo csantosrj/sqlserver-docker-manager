@@ -1,18 +1,18 @@
-# Guia de Build
+# Build Guide
 
-Este documento explica como gerar pacotes executáveis do SQL Server Docker Manager.
+This document explains how to generate executable packages for SQL Server Docker Manager.
 
-## Regra principal
+## Main rule
 
-O build deve ser feito no sistema operativo alvo:
+The build must be created on the target operating system:
 
-| Alvo | Onde gerar |
-|---|---|
-| Linux | Linux ou WSL |
-| Windows | Windows |
-| macOS | macOS |
+| Target  | Where to build |
+| ------- | -------------- |
+| Linux   | Linux or WSL   |
+| Windows | Windows        |
+| macOS   | macOS          |
 
-## Preparar ambiente
+## Prepare the environment
 
 ```bash
 python -m venv .venv
@@ -21,7 +21,7 @@ pip install -r requirements.txt
 pip install pyinstaller
 ```
 
-No Windows:
+On Windows:
 
 ```powershell
 python -m venv .venv
@@ -44,7 +44,7 @@ pyinstaller \
   main.py
 ```
 
-Resultado:
+Output:
 
 ```text
 dist/SQLServerDockerManager/
@@ -64,7 +64,7 @@ pyinstaller `
   main.py
 ```
 
-Resultado:
+Output:
 
 ```text
 dist/SQLServerDockerManager/SQLServerDockerManager.exe
@@ -84,8 +84,8 @@ pyinstaller \
   main.py
 ```
 
-## Notas
+## Notes
 
-- Use `--onedir` na primeira fase. É mais estável com PySide6.
-- Docker não é incluído no pacote.
-- O utilizador final precisa ter Docker e o container SQL Server configurados.
+* Use `--onedir` in the first stage. It is more stable with PySide6.
+* Docker is not included in the package.
+* The end user must have Docker installed and the SQL Server container configured.

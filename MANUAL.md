@@ -1,53 +1,53 @@
-# Manual de Utilização
+# User Manual
 
-## Primeiro passo: Settings
+## First step: Settings
 
-Abra **Settings** e configure:
+Open **Settings** and configure:
 
-- Container padrão;
-- Utilizador SQL;
+- Default container;
+- SQL user;
 - Password;
-- Diretório de backups;
-- Diretório de dados;
-- Idioma;
-- Tema.
+- Backup directory;
+- Data directory;
+- Language;
+- Theme.
 
-Depois clique em **Testar conexão**.
+Then click **Test connection**.
 
 ## Databases
 
-Use este menu para consultar as bases disponíveis no container configurado.
+Use this menu to view the databases available in the configured container.
 
-1. Abra **Databases**.
-2. Clique em **Atualizar bases**.
-3. Veja nome, estado, recovery, collation, compatibilidade e tamanho.
+1. Open **Databases**.
+2. Click **Refresh databases**.
+3. Check the name, status, recovery model, collation, compatibility level, and size.
 
 ## Backup
 
-1. Abra **Backup**.
-2. Clique em **Atualizar bases**.
-3. Escolha a base origem.
-4. Gere ou informe o nome do `.bak`.
-5. Clique em **Fazer backup**.
-6. Acompanhe os logs.
+1. Open **Backup**.
+2. Click **Refresh databases**.
+3. Select the source database.
+4. Generate or enter the `.bak` file name.
+5. Click **Create backup**.
+6. Follow the logs.
 
-O backup é criado no diretório configurado, normalmente `/var/opt/mssql/backup`.
+The backup is created in the configured directory, usually `/var/opt/mssql/backup`.
 
 ## Restore
 
-1. Abra **Restore**.
-2. Clique em **Atualizar backups**.
-3. Escolha o `.bak`.
-4. Informe a base destino.
-5. Clique em **Restaurar backup**.
-6. Confirme caso a base destino já exista.
+1. Open **Restore**.
+2. Click **Refresh backups**.
+3. Select the `.bak` file.
+4. Enter the destination database name.
+5. Click **Restore backup**.
+6. Confirm if the destination database already exists.
 
-Para testar em segurança, restaure com outro nome, por exemplo `MinhaBase_Restored`.
+To test safely, restore using a different name, for example `MyDatabase_Restored`.
 
 ## Logs
 
-A área de logs mostra o progresso e erros técnicos. Use **Copiar log** para copiar tudo.
+The log area shows progress and technical errors. Use **Copy log** to copy everything.
 
-## Segurança
+## Security
 
-Use com cuidado em produção. Confirmar overwrite evita restaurar por cima de uma base real sem querer.
+Use carefully in production. Overwrite confirmation helps prevent accidentally restoring over a real database.
